@@ -1,0 +1,69 @@
+---
+layout: default
+title: H2O
+cover: 'assets/images/cover1.png'
+class: 'home-template'
+navigation: True
+logo: 'assets/images/ghost.png'
+current: home
+---
+<!-- < default -->
+<!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
+
+<!-- The big featured header  -->
+<header class="main-header {% if page.cover %}"
+        style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
+    <nav class="main-nav overlay clearfix">
+        {% if page.logo %}<a class="blog-logo" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{{ page.logo }}" alt="Blog Logo" /></a>{% endif %}
+        {% if page.navigation %}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {% endif %}
+    </nav>
+    <!--
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{ site.name }}</h1>
+            <h2 class="page-description">{{ site.description }}</h2>
+        </div>
+    </div>
+    -->
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    
+</header>
+
+<!-- The main content area on the homepage -->
+<main id="content" class="content" role="main">
+
+    <article class="post">
+        <!--
+        <header class="post-header">
+            <h1 class="post-title">H2O: Haja to Ocean</h1>
+        </header>
+        -->
+        <section class="post-content">
+            H2O is short for Haja to Ocean.
+            Put succinctly, H2O performs machine learning with <a href='https://haja.io/'>Haja Networks</a>' flagship OrbitDB and <a href='https://oceanprotocol.com/'>Ocean Protocol</a>'s data markets.
+            <br><br>
+            H2O is the first app to run in the convergence stack, building on top of multiple software frameworks that underpin the <a href='/building/'>Convergence Ecosystem</a>.
+            It is a demonstration of machine learning in Web3, allowing users to run a clustering algorithm on data stored in OrbitDB and publish the resulting AI datasets to the Ocean Protocol blockchain.
+            <br><br>
+            H2O makes use of various technologies, including Python, Node and Angular.
+            The app runs the Ocean Protocol Trilobite release code and latest OrbitDB.
+            OrbitDB, H2O's core data store, is a peer-to-peer distributed database for <a href='https://ipfs.io/'>IPFS</a>.
+            A separate component, H2O-Host, has also been created so that developers can upload their own datasets to OrbitDB, as well as generate datasets for testing purposes.
+            <br><br>
+            To demonstrate how OrbitDB is a functional, ready-to-use tool in the convergence ecosystem, H2O allows the user to enter an OrbitDB address of their choosing.
+            The app plots the dataset, with the user able to specify the number of clusters the algorithm should aim for.
+            H2O will parse any two-dimensional set of points using K-means, a popular and efficient clustering method.
+            The clustered output is also plotted for the user to see.
+            <br><br>
+            Once the algorithm has run, datasets can be published to Ocean Protocol.
+            This is achieved using Ocean Protocol’s Squid API for Python.
+            H2O has built-in support for Azure hosting, the current standard for Ocean Protocol, as well as provides proof-of-concept hosting using OrbitDB for developers.
+            <br><br>
+            H2O is able to generate useful preprocessed datasets for AI and use them to seed Ocean Protocol’s global data market, all on a decentralised storage solution made possible by Haja Networks.
+            Though it is largely demonstrative for now, H2O is the first step toward apps in the convergence ecosystem.
+        </section>
+
+    </article>
+</main>
