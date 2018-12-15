@@ -2,7 +2,7 @@
 
 Site for [H2O](https://www.github.com/OutlierVentures/H2O).
 
-Ruby v2.4.2 and Jekyll v3.6.2.
+Requires Ruby 2.3+, Jekyll 3.6+, gcc and make.
 
 ## Develop
 
