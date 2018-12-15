@@ -156,7 +156,7 @@ td, th{ padding: 0; }
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "casper-icons", "Avenir Next", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -250,7 +250,7 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     text-rendering: geometricPrecision;
 }
 
@@ -490,7 +490,7 @@ textarea, select, input {
     padding: 6px 9px;
     margin: 0 0 5px 0;
     outline: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 1.6rem;
     font-weight: 100;
     line-height: 1.4em;
@@ -538,13 +538,14 @@ select {
 button {
     min-height: 35px;
     width: auto;
+    margin: 2rem 6rem;
     display: inline-block;
-    padding: 0.1rem 1.5rem;
+    padding: 0.1rem 4rem;
     cursor: pointer;
     outline: none;
     text-decoration: none;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 11px; /* Hacks targeting Firefox. */
     line-height: 13px; /* Hacks targeting Firefox. */
     font-weight: 300;
@@ -552,9 +553,9 @@ button {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: none;
-    border-radius: 0.3rem;
-    border: rgba(0,0,0,0.05) 0.1em solid;
-    background: #5ba4e5;
+    border-radius: 0.2rem;
+    border: #3A4145 1px solid;
+    background: transparent;
 }
 
 
@@ -623,7 +624,6 @@ body.nav-opened .site-wrapper {
     width: 100%;
     height: 100vh;
     margin-bottom: 5rem;
-    text-align: center;
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
@@ -631,8 +631,17 @@ body.nav-opened .site-wrapper {
 
 .main-header .inner {
     width: 80%;
+    margin: 0;
 }
-
+.outlier {
+    margin: 30px 40px;
+    position: absolute;
+    bottom: 0;
+    width: 15%
+}
+.outlier img {
+    max-width: 100%;
+}
 .main-nav {
     position: relative;
     padding: 35px 40px;
@@ -641,7 +650,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir Next', sans-serif;
 }
 
 /* Navigation */
@@ -816,7 +825,7 @@ body.nav-opened .nav {
     color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
     text-align: center;
     font-size: 12px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 35px;
@@ -988,7 +997,7 @@ body.nav-opened .nav {
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     color: #fff;
 }
 
@@ -1083,7 +1092,7 @@ body.page-template .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1526,7 +1535,7 @@ body.page-template .post-title {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     color: rgba(255,255,255,0.8);
     border: rgba(255,255,255,0.5) 1px solid;
     border-radius: 4px;
@@ -1618,7 +1627,7 @@ body.page-template .post-title {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1747,7 +1756,7 @@ body.page-template .post-title {
 }
 
 .gh-subscribe-rss {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 1.2rem;
     line-height: 1.4em;
 }
@@ -1760,7 +1769,7 @@ body.page-template .post-title {
     position: relative;
     margin: 8rem 0 0 0;
     padding: 1rem 15px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Avenir Next", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
@@ -1968,6 +1977,10 @@ body.page-template .post-title {
     .main-nav {
         padding: 5px;
         margin-bottom: 2rem;
+    }
+
+    .outlier {
+        margin: 10px;
     }
 
     .blog-logo {
