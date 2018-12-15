@@ -2,7 +2,7 @@
 layout: page
 title: OV Labs
 navigation: true
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/logo-dark.png'
 current: ov-labs
 ---
 If you think investing in crypto is hard – investing in our [Convergence Thesis](https://outlierventures.io/investment-strategy/), how DLT combines and converges with IoT, Big Data and AI is even harder. The technical complexity of keeping pace with multiple deep technologies and their interactions is hugely demanding and requires a dedicated team of technical analysts who can only really learn by doing. This means they must be active developers, administrators and participants of networks. We call this OV Labs, and it has been our commitment to the space since 2014 and includes a multitude of activity such as: building apps, hackathons, dev cons, running network nodes and applied academic research.

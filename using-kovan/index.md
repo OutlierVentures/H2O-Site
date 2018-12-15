@@ -2,7 +2,7 @@
 layout: page
 title: Using H2O with the Kovan testnet
 navigation: true
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/logo-dark.png'
 current: using-kovan
 ---
 Ocean Protocol does not support using the official Kovan contracts deployed by the team as of yet. The instructions here are for deploying your own set of Keeper contracts.

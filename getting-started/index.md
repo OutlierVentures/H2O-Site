@@ -2,7 +2,7 @@
 layout: page
 title: Getting started
 navigation: true
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/logo-dark.png'
 current: getting-started
 ---
 H2O, put simply, performs machine learning on OrbitDB data and publishes the result to Ocean Protocol.
@@ -22,7 +22,7 @@ Proof-of-concept OrbitDB hosting can be found in `backend` folder, see `app.py` 
 
 #### Architecture
 
-![Dataflow](../assets/images/dataflow.png)
+![Dataflow](../assets/images/dataflow.svg)
 
 H2O works with any dataset that can be clustered with SciKit Learn's `kmeans` function hosted using OrbitDB. This is a set of datapoints with each dimension stored as a separate entry in an OrbitDB docs type database. To fetch your database, just enter your OrbitDB address in the H2O UI.
 

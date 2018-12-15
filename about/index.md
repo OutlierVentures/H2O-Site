@@ -2,7 +2,7 @@
 layout: page
 title: About H2O
 navigation: true
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/logo-dark.png'
 current: about
 ---
 H2O builds on top of two core frameworks: [OrbitDB](https://github.com/orbitdb/orbit-db/) and [Ocean Protocol](https://github.com/oceanprotocol/).
@@ -13,7 +13,7 @@ OrbitDB is a peer-to-peer distributed database for [IPFS](https://ipfs.io/) whic
 
 The best way to understand how the components of H2O fit together is by following the flow of data.
 
-![Dataflow](/assets/images/dataflow.png)
+![Dataflow](/assets/images/dataflow.svg)
 
 Let’s say we have some data. First, we need to make it a part of the decentralised web. To get the dataset on IPFS, we use [H2O-Host](https://www.github.com/OutlierVentures/H2O-Host/). A lightweight application, H2O-Host creates an OrbitDB database from JSON-formatted data and sets us up as a peer (or node) on IPFS. Our database is referenced by an IPFS multihash, and anyone with this address can get a copy through OrbitDB. For now, OrbitDB works with public data, though access-controlled databases are in development.
 

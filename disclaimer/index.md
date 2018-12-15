@@ -2,7 +2,7 @@
 layout: page
 title: Disclaimer
 navigation: true
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/logo-dark.png'
 current: disclaimer
 ---
 We've done our best to make H2O secure. Our goal is to explore what's possible with the technologies that underpin the convergence ecosystem. In making what we build available to everyone, we need to be clear about what might happen, so here's a disclaimer:

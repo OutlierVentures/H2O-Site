@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Help us build
+title: Developer tools
 navigation: true
-logo: 'assets/images/ghost.png'
-current: help-us-build
+logo: 'assets/images/logo-dark.png'
+current: developer-tools
 ---
 The [Convergence Ecosystem](https://outlierventures.io/investment-strategy/) sees data captured by the Internet of Things, managed by blockchains, automated by artificial intelligence, and all incentivised using crypto-tokens. The Convergence Ecosystem is open-source, distributed, decentralised, automated and tokenised and we believe it is nothing less than an economic paradigm shift.
 
@@ -31,3 +31,4 @@ We encourage developers to help us further the Converge Ecosystem, so please tak
 - [Parity](https://github.com/paritytech/parity-ethereum): Ethereum client. Used for Kovan-flavoured H2O.
 - [Truffle HDWallet Provider](https://github.com/trufflesuite/truffle-hdwallet-provider): mnemonic-focused wallet provider. Comes as an NPM package.
 - [MetaMask](https://metamask.io/): Ethereum wallet browser extension.
+- [Infura](https://infura.io/): Ethereum and IPFS API.
