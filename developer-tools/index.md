@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Developer tools
+title: Get coding
 navigation: true
 logo: 'assets/images/logo-dark.png'
 current: developer-tools
@@ -9,9 +9,13 @@ The [Convergence Ecosystem](https://outlierventures.io/investment-strategy/) see
 
 ![Convergence](../assets/images/convergence.png)
 
-H2O is an app in the convergence stack, sitting between Data Interoperability and the AI Data Market. It bridges Haja Networks and Ocean Protocol, and would not have been possible without the excellent tools made available by these pioneers of Convergence.
+H2O is an app in the Convergence stack, sitting between Data Interoperability and the AI Data Market. It bridges Haja Networks and Ocean Protocol, and would not have been possible without the excellent tools made available by these pioneers of Convergence.
 
-We encourage developers to help us further the Converge Ecosystem, so please take a look at these great frameworks used to build H2O:
+We encourage developers to help us further the Convergence Ecosystem, so please take a look at the H2O codebase and the great frameworks used to build H2O:
+
+#### H2O
+
+- [H2O on GitHub](https://www.github.com/OutlierVentures/H2O): the H2O codebase which you are most welcome to run and fork.
 
 #### Haja Networks
 
@@ -20,7 +24,8 @@ We encourage developers to help us further the Converge Ecosystem, so please tak
 
 #### Ocean Protocol
 
-- [Squid-Py](https://github.com/oceanprotocol/squid-py) : client library for using the Ocean stack in Python.
+- [Ocean Protocol Documentation](https://docs.oceanprotocol.com/): the main starting point for building on Ocean Protocol.
+- [Squid-Py](https://github.com/oceanprotocol/squid-py): client library for using the Ocean stack in Python.
 - [Docker Images](https://github.com/oceanprotocol/docker-images): Docker images for quickly spinning up Ocean components and getting used to the Ocean stack. Used by the standard launch of H2O (Keeper and Aquarius images).
 - [Keeper Contracts](https://github.com/oceanprotocol/keeper-contracts): Solidity contracts for Ocean Protocol implementing [Token Curated Registries, Curated Proof Markets and the Ocean token](https://oceanprotocol.com/tech-whitepaper.pdf). Used by H2O for Kovan testnet deployment.
 - [Aquarius](https://github.com/oceanprotocol/aquarius): metadata manager for data assets published to Ocean Protocol. Can be optionally used for H2O with Kovan.
