@@ -22,7 +22,7 @@ Proof-of-concept OrbitDB hosting can be found in `backend` folder, see `app.py` 
 
 #### Architecture
 
-![Dataflow](../assets/images/dataflow.svg)
+![Dataflow](../assets/images/dataflow.png)
 
 H2O works with any dataset that can be clustered with SciKit Learn's `kmeans` function hosted using OrbitDB. This is a set of datapoints with each dimension stored as a separate entry in an OrbitDB docs type database. To fetch your database, just enter your OrbitDB address in the H2O UI.
 

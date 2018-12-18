@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Developer tools
+title: Get coding
 navigation: true
 logo: 'assets/images/logo-dark.png'
-current: developer-tools
+current: get-coding
 ---
 The [Convergence Ecosystem](https://outlierventures.io/investment-strategy/) sees data captured by the Internet of Things, managed by blockchains, automated by artificial intelligence, and all incentivised using crypto-tokens. The Convergence Ecosystem is open-source, distributed, decentralised, automated and tokenised and we believe it is nothing less than an economic paradigm shift.
 

@@ -13,11 +13,11 @@ OrbitDB is a peer-to-peer distributed database for [IPFS](https://ipfs.io/) whic
 
 The best way to understand how the components of H2O fit together is by following the flow of data.
 
-![Dataflow](/assets/images/dataflow.svg)
+![Dataflow](/assets/images/dataflow.png)
 
-Let’s say we have some data. First, we need to make it a part of the decentralised web. To get the dataset on IPFS, we use [H2O-Host](https://www.github.com/OutlierVentures/H2O-Host/). A lightweight application, H2O-Host creates an OrbitDB database from JSON-formatted data and sets us up as a peer (or node) on IPFS. Our database is referenced by an IPFS multihash, and anyone with this address can get a copy through OrbitDB. For now, OrbitDB works with public data, though access-controlled databases are in development.
+Let’s say we have some data. First, we need to make it a part of the decentralised web. To get the dataset on IPFS, we use [H2O-Host](https://www.github.com/OutlierVentures/H2O-Host/). A lightweight application, H2O-Host creates an OrbitDB database from JSON-formatted data and sets us up as a peer (or node) on IPFS. Our database is referenced by an IPFS multihash, and anyone with this address can get a copy through OrbitDB.
 
-The H2O-Host component includes a data generation script for testing.
+The H2O-Host component includes a data generation script for testing, as well as an example dataset of uber pickup locations.
 
 Once a few people have a copy of our database, we get to see one of the standout features of IPFS and OrbitDB. When someone goes to our multihash, the closest peer to them is intelligently selected to serve them the data. This means as the network grows, the speed of serving content collectively improves. Better still, the data isn’t really stored anywhere in particular, but bounces around as it is needed. This massively improves censorship resistance and the ability to withstand denial of service attacks.
 
@@ -36,17 +36,26 @@ At this point, we probably want to take a look at our data. Fortunately, H2O vis
 
 The clustering technique H2O implements is K-means. K-means does what it says on the tin: it finds k means, or cluster centres. To do this, the algorithm divides a dataset into groups having approximately the same number of points closest to them. In other words, K-means looks for data density. This approach is known as vector quantisation, and allows K-means to assign each datapoint to a cluster centre, creating a grouping.
 
+![Clustering](/assets/images/clustering.gif)
+<center>K-means visualization by Andrey A. Shabalin</center>
+<p></p>
+
 K-means has a high computational complexity, which means computing it is difficult. H2O computes the problem in Python using the open-source machine learning library SciKit Learn. SciKit Learn makes a vast array of machine learning algorithms available at our fingertips and is currently one of the most powerful tools for developing AI.
 
 While Python drives the back-end of H2O (along with some NodeJS), the front end is written in Angular and interfaces with the back-end using Flask. This allows H2O to quickly relay and visualise relevant information, such as rendering the clustered output following a K-means computation.
 
-The processed data, now of more value in the likes of Ocean Protocol’s global data market, is ready to be published.
+To relate this to real data, we can use the Uber pickup location data for New York included in the H2O-Host repo. et's say we want to start decentralised ride sharing app. If we own 5 cars, we take a sample of the pickup data, load it in H2O and specify 5 as the number of clusters. Plotting the resulting dataset on a map of the city, we can see the car deployment locations which minimise customer wait time and fuel costs.
 
+![Map](/assets/images/map.png)
+
+The processed data, now monetizable on Ocean Protocol’s global data market, is ready to be published.
 
 #### Serving the data
 
-H2O makes use of Ocean Protocol’s Squid API for Python to register datasets on the blockchain. Squid is a library for writing applications that speak to and interact with Ocean Protocol, coming in JavaScript and Python variants. H2O uses the latter for quick interfacing with its machine learning components, which already run in Python. Asset price, name, description and author can all be set directly by the user in H2O.
+H2O makes use of Ocean Protocol’s Squid API for Python to register datasets on the blockchain. Squid is a library for writing applications that speak to and interact with Ocean Protocol, coming in JavaScript and Python variants. H2O uses the latter for quick interfacing with its machine learning components, which already run in Python. Asset price, name, description and author can all be set directly by the user in the app.
 
-Ocean Protocol, as a global data marketplace, does not host published datasets. The network demands that users host their own data and currently only supports Azure storage, though several alternatives, including decentralised options, are on the roadmap. H2O interfaces directly with Azure storage using the Azure Python SDK. In H2O, we’re able to directly upload our dataset in a minimised JSON format using only an account name and access key. The dataset is written straight to an Azure blob and a machine-readable download link is passed to the Ocean blockchain. This link is also fed back to us, the user, so we can download our clustered data immediately should we want to. 
+H2O integrates with the Kovan testnet, and developers who opt to use it are fed an Etherscan link to their published smart contracts when registering assets.
 
-In addition to Azure hosting, H2O includes Proof-of-Concept OrbitDB hosting. After all, OrbitDB can serve a user data in very much the same way that Azure can – it just isn’t supported by Ocean Protocol yet. Guides for getting started, whether with Azure or OrbitDB, can be found in the docs. Even if you don’t have access to any data yourself, H2O-Host comes with scripts for generating clusterable data that you can feed into H2O, so test away - check out the [GitHub](https://www.github.com/OutlierVentures/H2O) and [live version](https://h2o.apps.outlierventures.io).
+Note that Ocean Protocol, as a global data marketplace, does not host published datasets. The network demands that users host their own data and currently only supports Azure storage, though several alternatives, including decentralised options, are on the roadmap. H2O interfaces directly with Azure storage using the Azure Python SDK. In H2O, we’re able to directly upload our dataset in a minimised JSON format using only an account name and access key. The dataset is written straight to an Azure blob and a machine-readable download link is passed to the Ocean blockchain. This link is also fed back to us, the user, so we can download our clustered data immediately should we want to. 
+
+In addition to Azure hosting, H2O includes Proof-of-Concept OrbitDB hosting. After all, OrbitDB can serve a user data in very much the same way that Azure can – it just isn’t supported by Ocean Protocol yet. Guides for getting started, whether with Azure or OrbitDB, can be found in the docs. Even if you don’t have access to any data yourself, H2O-Host comes with scripts for generating clusterable data that you can feed into H2O, so test away - check out the [GitHub](https://www.github.com/OutlierVentures/H2O) and [live version](https://live.h2o.outlierventures.io).
