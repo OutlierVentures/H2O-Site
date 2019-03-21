@@ -2,12 +2,18 @@
 
 Site for [H2O](https://www.github.com/OutlierVentures/H2O).
 
-Requires Ruby 2.3+, Jekyll 3.6+, gcc and make.
+Requires Ruby 2.3+, gcc and make.
+
+## Install
+
+```
+sudo gem install jekyll bundler
+bundle install
+```
 
 ## Develop
 
 ```
-bundle install
 bundle exec jekyll serve
 ```
 
